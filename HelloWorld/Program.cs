@@ -1,8 +1,7 @@
-﻿using HelloWorld;
+using HelloWorld;
 
 Console.WriteLine("Please Enter a Year:");
 var input = Console.ReadLine();
-
 var inputnumber = 0;
 
 try 
@@ -27,7 +26,5 @@ catch (ArgumentException e) {
     Console.WriteLine(e.Message);
     return;
 }
-
-
 if(result) Console.WriteLine("yay"); 
 else Console.WriteLine("nay");
