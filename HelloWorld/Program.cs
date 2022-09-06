@@ -1,3 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!!!!!!!");
-int i = 21;
+﻿Console.WriteLine("Please Enter a Year:");
