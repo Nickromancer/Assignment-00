@@ -3,39 +3,39 @@ namespace HelloWorld.tests;
 public class LeapYearCalculatorTests
 {
     [Fact]
-    public void IsLeapYear_given_4_returns_true()
+    public void IsLeapYear_given_2004_returns_true()
     {
         //Arrange
         var sut = new LeapYearCalculator();
 
         //Act
-        var result = sut.IsLeapYear(4);
+        var result = sut.IsLeapYear(2004);
 
         //Assert
         Assert.Equal(true, result);
     }
 
     [Fact]
-    public void IsLeapYear_given_1_returns_false()
+    public void IsLeapYear_given_1583_returns_false()
     {
         //Arrange
         var sut = new LeapYearCalculator();
 
         //Act
-        var result = sut.IsLeapYear(1);
+        var result = sut.IsLeapYear(1583);
 
         //Assert
         Assert.Equal(false, result);
     }
 
     [Fact]
-    public void IsLeapYear_given_200_returns_false()
+    public void IsLeapYear_given_2000_returns_false()
     {
         //Arrange
         var sut = new LeapYearCalculator();
 
         //Act
-        var result = sut.IsLeapYear(200);
+        var result = sut.IsLeapYear(1900);
 
         //Assert
         Assert.Equal(false, result);
@@ -52,5 +52,18 @@ public class LeapYearCalculatorTests
 
         //Assert
         Assert.Equal(true, result);
+    }
+
+    [Fact]
+    public void IsLeapYear_throws_Argument_Exception_given_1581()
+    {
+        //Arrange
+        var sut = new LeapYearCalculator();
+
+        //Act
+        var input = 1581;
+
+        //Assert
+        Assert.Throws<ArgumentException>(() => sut.IsLeapYear(input));
     }
 }
